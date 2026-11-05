@@ -61,6 +61,8 @@ wget -O - https://github.com/nikkinikki-org/OpenWrt-nikki/raw/refs/heads/main/un
 
 查看 [Wiki](https://github.com/nikkinikki-org/OpenWrt-nikki/wiki)
 
+首次初始化时，API 密钥和默认代理密码分别从系统随机源生成，各为 64 位十六进制字符串（256 位随机值）。仅填充空的凭据字段；已有凭据、用户名及其他用户配置保留，升级不会自动轮换旧密码。随机源读取失败时初始化退出，保留初始化标记以便重试。
+
 ## 如何工作
 
 1. 混入并更新配置文件。

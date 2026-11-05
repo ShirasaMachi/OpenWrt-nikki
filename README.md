@@ -61,6 +61,8 @@ wget -O - https://github.com/nikkinikki-org/OpenWrt-nikki/raw/refs/heads/main/un
 
 See [Wiki](https://github.com/nikkinikki-org/OpenWrt-nikki/wiki)
 
+On first initialization, the API secret and default proxy password are generated independently from the system CSPRNG. Each is a 64-character hexadecimal string containing 256 random bits. Only empty credential fields are populated; existing credentials, usernames and other user settings are preserved. Upgrades do not automatically rotate old passwords. If randomness cannot be read, initialization fails and keeps its marker for retry.
+
 ## How does it work
 
 1. Mixin and Update profile.
